@@ -1,0 +1,6 @@
+@LIVEDJ_Gateway_HostAddress = http://localhost:5193
+
+GET {{LIVEDJ_Gateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZpRk3fangGW/0zCf4J0ncYVGh/zF9uHvLSvp8t7QEhdcw5IFdOscTlTtLfo9E76p5yHy5Ln40NjPjFWjawmvlA==",
+  "success": true,
+  "projectFilePath": "C:\\Apps\\.NET Projects\\LIVEDJ Project\\LIVEDJ-Gateway\\LIVEDJ-Gateway\\LIVEDJ-Gateway.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Steijn\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Steijn\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Steijn\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\Steijn\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\Steijn\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\Steijn\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
