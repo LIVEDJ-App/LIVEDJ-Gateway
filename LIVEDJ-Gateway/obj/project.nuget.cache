@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZpRk3fangGW/0zCf4J0ncYVGh/zF9uHvLSvp8t7QEhdcw5IFdOscTlTtLfo9E76p5yHy5Ln40NjPjFWjawmvlA==",
+  "dgSpecHash": "yX3Hpw5esK/c4s+lL95ZTIrv+T2tImrrh/xFdSG1i6VJwvirDAixY/37UX4Ka7XQd2FY978DlLbhTsQUbkmrBg==",
   "success": true,
-  "projectFilePath": "C:\\Apps\\.NET Projects\\LIVEDJ Project\\LIVEDJ-Gateway\\LIVEDJ-Gateway\\LIVEDJ-Gateway.csproj",
+  "projectFilePath": "C:\\Apps\\.NET Projects\\LIVEDJ Project\\LIVEDJ-Gateway\\LIVEDJ-Gateway\\LIVEDJ-Gateway.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Steijn\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Steijn\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

@@ -434,9 +434,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Apps\\.NET Projects\\LIVEDJ Project\\LIVEDJ-Gateway\\LIVEDJ-Gateway\\LIVEDJ-Gateway.csproj",
-      "projectName": "LIVEDJ-Gateway",
-      "projectPath": "C:\\Apps\\.NET Projects\\LIVEDJ Project\\LIVEDJ-Gateway\\LIVEDJ-Gateway\\LIVEDJ-Gateway.csproj",
+      "projectUniqueName": "C:\\Apps\\.NET Projects\\LIVEDJ Project\\LIVEDJ-Gateway\\LIVEDJ-Gateway\\LIVEDJ-Gateway.Api.csproj",
+      "projectName": "LIVEDJ-Gateway.Api",
+      "projectPath": "C:\\Apps\\.NET Projects\\LIVEDJ Project\\LIVEDJ-Gateway\\LIVEDJ-Gateway\\LIVEDJ-Gateway.Api.csproj",
       "packagesPath": "C:\\Users\\Steijn\\.nuget\\packages\\",
       "outputPath": "C:\\Apps\\.NET Projects\\LIVEDJ Project\\LIVEDJ-Gateway\\LIVEDJ-Gateway\\obj\\",
       "projectStyle": "PackageReference",
