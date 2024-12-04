@@ -1,0 +1,51 @@
+networks:
+  kong-net:
+    driver: bridge
+  rabbit-net:
+    driver: bridge
+
+services:
+  kong:
+    volumes:
+    - ./kong.yml:/kong.yml
+    image: kong:3.8.0
+    container_name: 'livedj-kong'
+    networks:
+      - kong-net
+    restart: unless-stopped
+    environment:
+      KONG_DATABASE: off
+      KONG_DECLARATIVE_CONFIG: ./kong.yml
+      KONG_ADMIN_GUI_PATH: '/'
+      KONG_ADMIN_LISTEN: 0.0.0.0:8001
+      KONG_ADMIN_GUI_URL: 'http://localhost:8002'
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://kong:8000"]
+      interval: 5s
+      timeout: 2s
+      retries: 15
+    ports:
+      - 8000:8000
+      - 8001:8001
+      - 8002:8002
+      - 8443:8443
+      - 8444:8444
+
+  rabbitmq:
+    image: rabbitmq:4.0-management
+    container_name: 'livedj-rabbitmq'
+    restart: unless-stopped
+    ports:
+        - 15672:15672
+        - 5672:5672
+    volumes:
+        - livedj-rabbitmq-data:/var/lib/rabbitmq
+        - livedj-rabbitmq-data:/var/log/rabbitmq
+    networks:
+        - rabbit-net
+    
+volumes:
+  livedj-rabbitmq-data:
+    name: livedj-rabbitmq-data
+
+

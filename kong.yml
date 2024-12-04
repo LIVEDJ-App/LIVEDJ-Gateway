@@ -1,0 +1,23 @@
+ _format_version: "3.0"
+ _transform: true
+
+ services:
+  - name: livestream-service
+    host: livestream-service.local
+    port: 80
+    protocol: http
+    routes:
+    - name: livestream-route
+      paths:
+      - /livestream
+      strip_path: false
+
+  - name: feedback-service
+    host: feedback-service.local
+    port: 80
+    protocol: http
+    routes:
+    - name: feedback-route
+      paths:
+      - /feedback
+      strip_path: false
