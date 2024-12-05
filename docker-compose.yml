@@ -32,7 +32,7 @@ services:
       - 8444:8444
 
   rabbitmq:
-    image: rabbitmq:4.0-management
+    image: rabbitmq:4-management
     container_name: 'livedj-rabbitmq'
     restart: unless-stopped
     ports:

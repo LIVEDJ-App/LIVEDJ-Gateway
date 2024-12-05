@@ -3,21 +3,17 @@
 
  services:
   - name: livestream-service
-    host: livestream-service.local
-    port: 80
-    protocol: http
+    url: http://host.docker.internal:5280
     routes:
-    - name: livestream-route
-      paths:
-      - /livestream
+    - name: livestream-service
       strip_path: false
+      paths:
+      - /livestream-service
 
   - name: feedback-service
-    host: feedback-service.local
-    port: 80
-    protocol: http
+    url: http://host.docker.internal:5289
     routes:
-    - name: feedback-route
-      paths:
-      - /feedback
+    - name: feedback-service
       strip_path: false
+      paths:
+      - /feedback-service
