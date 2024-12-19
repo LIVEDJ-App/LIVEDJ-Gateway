@@ -1,0 +1,41 @@
+name: Push & Deploy to GKE
+
+on:
+    push:
+      branches: [ "main" ]
+
+jobs:
+  Deploy-to-GKE:
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Google Auth
+        id: auth
+        uses: 'google-github-actions/auth@v2'
+        with:
+          token_format: 'access_token'
+          project_id: ${{ secrets.GCR_PROJECT_ID }}
+          service_account: ${{ secrets.GCR_SERVICE_ACCOUNT }}
+          workload_identity_provider: ${{ secrets.GCR_WORKLOAD_IDENTITY_PROVIDER }}
+          
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v2'
+        with:
+          install_components: 'gke-gcloud-auth-plugin'
+          version: '>= 363.0.0'
+
+      - name: Deploy to GKE
+        env:
+          GOOGLE_PROJECT: ${{ secrets.GCR_PROJECT_ID }}
+        run: |
+          gcloud container clusters get-credentials livedj-cluster-1 --region us-central1
+          sed -i "s/GOOGLE_PROJECT/$GOOGLE_PROJECT/g" deployments/kong/gateway.yml
+          sed -i "s/GOOGLE_PROJECT/$GOOGLE_PROJECT/g" deployments/kong/gateway-class.yml
+          kubectl apply -f deployments/kong/gateway.yml
+          kubectl apply -f deployments/kong/gateway-class.yml
