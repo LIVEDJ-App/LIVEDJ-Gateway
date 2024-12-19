@@ -3,7 +3,7 @@ kind: Gateway
 metadata:
   name: kong-gateway
 spec:
-  gatewayClassName: kong-gateway-class
+  gatewayClassName: kong-gateway-clas
   listeners:
   - name: kong-test
     port: 80
